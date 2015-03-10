@@ -1,0 +1,14 @@
+    h       f'_ds       error    f'_sin      error      f'_simm    error 
+0.100000   0.497364  -0.042938   0.581440   0.041138   0.539402  -0.000900
+0.010000   0.536090  -0.004212   0.544494   0.004192   0.540292  -0.000010
+0.005000   0.538206  -0.002096   0.542402   0.002100   0.540304   0.000002
+0.001000   0.539958  -0.000344   0.540674   0.000371   0.540316   0.000014
+0.000500   0.540137  -0.000165   0.540495   0.000193   0.540316   0.000014
+0.000100   0.540614   0.000312   0.540018  -0.000284   0.540316   0.000014
+0.000010   0.542402   0.002100   0.536442  -0.003860   0.539422  -0.000880
+0.000001   0.536442  -0.003860   0.536442  -0.003860   0.536442  -0.003860
+
+osservazioni
+1) per h grandi l'errore è grande in quanto il rapporto incermentale non è rispettato. Si osserva che questo è più piccolo per la derivata simmetrica in quanto h va "spezzato" rispetto ai casi precedenti
+2)chiaramente l'errore cala fino ad un certo punto dove comincia a risalire, perché?
+	idea: la differenza fra due numeri dello stesso ordine di grandezza mi da cifre significative al massimo fino a epsilon * mantissa non importa che io dopo sia capace di scrivere il risultato con più cifre significative se io non le avevo in partenza, qesto rimane comunque "più scorretto" di uno teoricamente meno corretto ma più significativo. La divisione fa comparire questo dettaglio perche riporta in auge le cifre significative "inventate"(che ricordiamo non sono inventate, sono 0 binari che quando vengono trasformati in decimale diventano numeri a caso). Di per se in questo algoritmo la divisione non commette errori.

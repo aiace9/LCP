@@ -1,0 +1,2 @@
+# LCP
+I use this repository to keep track of my Laboratory of Computational Physics. The code you will find here is a useful collection of algorithms I have found on-line (on my teacher site mostly) corrected by my self where necessary.

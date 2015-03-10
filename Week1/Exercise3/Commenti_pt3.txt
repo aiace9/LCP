@@ -1,0 +1,40 @@
+ipotesi 1:
+l'insorgenza del problema è da individuarsi nella sottrazione di numeri molto diversi fra loro.
+	la funzione sulla quale stiamo lavorando:
+	f_x(n)=x^n/n! 
+	ha un problema, per x piccolo la funzione è decrescente in quanto il fattoriale vince molto rapidametne sull' elevazione a potenza.
+		- si osserva che per x piccolo l'algoritmo non ha problemi
+	per x elevato la funzione presenta un massimo
+		- si ossrva per x = 20
+		  x=               step conv  valore algo       valore vero
+		  20.0000000              72  -2.75667548       2.06115369E-09
+		-la discordanza si presenta al valore:
+		  x= 				Quindi step			valore algo     valore vero
+		  9.19999886              47   1.25888080E-04   1.01039521E-04
+		-allo stesso valore si osserva già un oscillazione consistente (+-1200)
+		-l'oscillazione si osserva anche per valori molto più piccoli tipo 2 ma molto più contenuta. 
+		oss: il picco si trova sempre al passo = al valore, probabilmente si può dimostrare.
+
+ipotesi 2:
+il numero che stiamo cercando è piccolo, la presenza di questo picco potrebbe far perdere tutte le cifre decimali piccole ottenute nella prima parte della serie causando " un nuovo start all'algoritmo".Per x piccoli l'algoritmo parte e oscilla in maniera moderata, (piccola perdita di cifre) e converge verso 0 quasi immediatamente
+per x grandi l'algoritmo parte con piccole cifre poi diverge sommando e sottraendo cifre enormi rispetto alle precedenti (anche se pur sempre della stessa magnitudine, quindi possiamo assumere non ci sia errore nella loro somma sottrazione) ma questo ci fa perdere tutti i numeri piccoli (10^-14 vs 10^4) che avevamo sottratto in precedenza causando a tutti gli effetti una perdita di tutta l'informazione guadagnata prima dell'oscillazione.La somma di tutti i contributi da questo punto in poi si fermerà sicuramente ma non sul punto giusto.
+
+verifica:
+l'algoritmo migliore non dovrebbe presentare contributi molto grandi!
+Falso, l'algoritmo migliore presenta valori molto grandi ma non oscilla.
+
+	si osserva l'assenza di un oscillazione, il picco è presente anche se con un solo segno (effettivamente me lo aspettavo). Però il numero che dobbiamo raggiungere non è più piccolo perché abbiamo invertito la funzione complessiva quindi la somma di numeri grandi con perdita dei piccoli contributi non è più rilevante.
+
+
+Riassunto
+nel primo caso il numero in cui ponevamo il nostro interesse era piccolo e l'algoritmo per x elevati presentava un problema, ad un certo punto si presentava un oscillazione tale da annullare per cifre significative-- NON per errori dovuti ad ordini di grandezza fra le quantità confrontate (o meglio il problema è questo ma essendo pedanti i contributi crescono piano quindi lo è ma non direttamente)-- tutti i contributi fino a quel punto sommati causando dunque una completa perdita dell'informazione. Dopo l'oscillazione l'algoritmo riparte da un punto random e continua a sommare contributi sempre più piccoli fino ad arrivare (ovviamente) alla condizione di uscita.
+Nel secondo caso abbiamo spostato il nostro interesse su un numero grande e poi ne abbiamo preso l'inverso, questo fa si che l'informazione importante non stia più nei piccoli contributi presenti nella fase iniziale del codice, bensì proprio in quelli oscillanti (che ora grazie ad una magia non oscillano più, ricordiamo che lo sviluppo in serie di taylor non ha più il segno oscillante) che fanno crescere a dismisura il valore del nostro esponenziale.
+Conclusione
+si potrebbe analiticamente trovare dei limiti ragionevoli desto e sinistro alla nostra funzione f_x(n) e limitare la somma a quei valori per accelerare il nostro algoritmo senza una perdita di informazione significativa
+la prima parte non può essere eliminata a priori in quanto sfortunatamente non possiamo prevedere il futuro ma possiamo migliorare la condizione di stop.
+la miglioria trovata è element <  epsilon(sum)*sum ma sarebbe più opportuno individuare un modo per estrapolare la mantissa da sum e moltiplicare solo epsilon per la mantissa.
+queste migliorie sono state apportate basandosi sul calcolo per x=200
+
+Nota alla luce del punto 4: qua il problema sta nel fatto che anche se sottraiamo numeri con la stessa mantissa e valori pressoché doppi gli uni agli altri ci spostiamo gradualmente ed inesorabilmente su e giù nella notazione floating point. Non è come nell'ultimo caso dove i valori sono simili qua non è quello il problema!!!
+QUA I VALORI SONO DIVERSI E GRANDI, QUINDI SI MANGIANO I PICCOLI
+DI LA I VALORI SONO SIMILI E QUINDI LA LORO DIFFERENZA DIMINUISCIE IL NUMERO DI CIFRE SIGNIFICATIVE DISPONIBILI COSA MESSA IN EVIDENZA DALLA DIVISIONE.
