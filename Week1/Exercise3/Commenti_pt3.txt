@@ -37,4 +37,12 @@ queste migliorie sono state apportate basandosi sul calcolo per x=200
 
 Nota alla luce del punto 4: qua il problema sta nel fatto che anche se sottraiamo numeri con la stessa mantissa e valori pressoché doppi gli uni agli altri ci spostiamo gradualmente ed inesorabilmente su e giù nella notazione floating point. Non è come nell'ultimo caso dove i valori sono simili qua non è quello il problema!!!
 QUA I VALORI SONO DIVERSI E GRANDI, QUINDI SI MANGIANO I PICCOLI
-DI LA I VALORI SONO SIMILI E QUINDI LA LORO DIFFERENZA DIMINUISCIE IL NUMERO DI CIFRE SIGNIFICATIVE DISPONIBILI COSA MESSA IN EVIDENZA DALLA DIVISIONE.
+DI LA I VALORI SONO SIMILI E QUINDI LA LORO DIFFERENZA DIMINUISCIE IL NUMERO DI CIFRE SIGNIFICATIVE DISPONIBILI COSA MESSA IN EVIDENZA DALLA DIVISIONE
+
+Simulazioni effettuate:
+x 0--10
+x 0--100
+per entrambi gli algoritmi
+sudiate nel dettaglio:
+x=2,20,40,200
+da 2 20 e 40 si evincono le conclusioni, da 200 si evince il miglioramento del codice.
