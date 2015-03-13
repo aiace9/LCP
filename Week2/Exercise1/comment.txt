@@ -1,0 +1,12 @@
+domanda1 - seq1.dat
+l'algoritmo min-max aggiunto con l'accortezza di posizionare all' inizio il valore massimo sopra il più alto valore producibile dalla sequenza ci ha detto che il massimo è 8 e il minimo è 0
+domanda2
+il grafico generato con il comando seq1.plt ci ha permesso di verificare che tutti i numeri interi nell' intervallo 0-8 vengono generati
+domanda 3
+sì dal grafico sopra si evince un ripetersi della sequenza generata con un "chiaro" periodo di 10 punti
+domanda 3 - seq2.dat
+il periodo è di: 8 elementi, per individuarlo è stato usato un trucco molto instabile ( abbiamo intersecato il grafico con una retta ad un altezza ragionevole e abbiamo verificato ogni quanti punti questa retta viene intersecata, la cosa è molto instabile ma ha richiesto poco tempo per essere programmata)
+il test seq3.dat 
+mostra una funzione ancora periodica di periodo 8, ma questo test è fallace in quanto partimamo da un punto già esplorato nella sequenza precedente
+il test seq4.dat 
+parte da un punto non esplorato dalla sequenza precedente ma anche questa sequena risulta periodica di periodo 8 (il periodo è stato valutato con lo stesso sistema di prima adattato alla nostra sequenza, retta all'altezza 5)
