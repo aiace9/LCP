@@ -1,0 +1,6 @@
+Domanda c:
+simulando con seq.init e disegnando il plot istogramma con seq.plt otteniamo una sequenza che NON èdistribuita uniformemente
+Domanda d: 
+c'è chiaramente una correlazione fra i punti, i punti sono in numero finito, un vero programma random creerebbe un numero infinito di punti
+Domanda e:
+what we answare at the death, not today ;)

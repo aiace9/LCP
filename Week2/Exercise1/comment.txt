@@ -17,3 +17,4 @@ quindi una volta che ho ritrovato un numero sono sicuro di aver trovato il perio
 ipotesi a) generare tutti i numeri e vedere se il numero che ho selezionato si è già presentato
 ma questo richede vettori molto lunghi e questo è un problema, anche perché fortramo non ha le liste.
 credo che lo implementerò lo stesso... però devo tornarci 
+il periodo è di 256 punti.
