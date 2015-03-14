@@ -1,5 +1,6 @@
 !
-!     generation of pseudorandom numbers - linear congruential method
+!     generation of pseudorandom numbers
+!     with the uniformity test
 !
 program random_lcm
   implicit  none
@@ -43,31 +44,36 @@ program random_lcm
 
   print*, "starting generation of random sequance"
   
-  !generation of the number
+  !generation of the numbers
+
   do i = 1, number, 1
       do j = 1, i , 1
         call random_number(rsequance(i,j))
       end do
   end do
-print*, 'a'
-  !Test for b point
 
+  !Test for b point
+  ! cicle over the k
   do i = 1, k, 1
+    !cicle over the sequances of N:  1, 2, 3,...., N
     do j = 1, number, 1
+      !sum the element of the sequance
+      print*, 'start',j
       do z = 1, j, 1
-      test(i,j)= test(i,j) + (1._dp / number) * (rsequance(j,z)**i)
+        !print*, test(i,j)
+        test(i,j) = test(i,j) + (rsequance(j,z)**i)
       end do
-      test (i,j) = test (i,j) - 1/(i+1)
+      !division over the number of smapes
+      test (i,j) = test (i,j) / real(j) - 1 / (i+1)
     end do
   end do
   print*, 'a'
   
   do i = 1, number, 1
-    write(unit=1, fmt=*, iostat=ios) i, test(1,i)
+    write(unit=1, fmt=*, iostat=ios) i, test(7,i)
     if ( ios /= 0 ) stop "Write error in file unit 1"
-    
   end do
-  print*, 'a'
+
   !deallocation stuff
   
   if (allocated(rsequance)) deallocate(rsequance, stat=err)
