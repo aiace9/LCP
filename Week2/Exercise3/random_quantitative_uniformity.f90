@@ -9,14 +9,14 @@ program random_lcm
   integer, parameter :: dp = selected_real_kind(14,200)
   ! variabili cicliche
   integer :: i,j,z
-  integer :: number, k
+  integer :: number, k, x
 
-  real (kind=dp), dimension(:,:), allocatable :: rsequance
-  real (kind=dp), dimension(:,:), allocatable :: test
+  real(dp), dimension(:), allocatable :: rvalue
+  real (kind=dp), dimension(:), allocatable :: test
   
   !error variable and flag
-  integer :: flag = 0
   integer :: err,ios
+  logical :: debug = .true.
 
   !     supply initial values of some variables:
   !     seed:   to start; a: 
@@ -25,62 +25,70 @@ program random_lcm
   print*,' wich range of N do you want to simulate?'
   read(*,*)number
 
-  print*, 'wich range of K do you want to simulate?'
+  print*, 'wich K do you want to simulate?'
   read(*,*)k
 
-  !inizialising the serching tool for find the period
-  allocate(rsequance(number,number), stat=err)
-  if (err /= 0) print *, "rsequance: Allocation request denied"
-  rsequance=0
+  print*, 'at wich distatce do you want to compute the correlation?'
+  read(*,*)x
 
-  allocate(test(k,number), stat=err)
+  allocate(rvalue(number), stat=err)
+  if (err /= 0) print *, "rvalue: Allocation request denied"
+  rvalue = 0
+
+  allocate(test(number), stat=err)
   if (err /= 0) print *, "test: Allocation request denied"
-  test=0
+  test = 0
   
 
   !
-  open(unit=1, file="data.dat", iostat=ios, status="replace", action="write")
+  open(unit=1, file="uniformity.dat", iostat=ios, status="replace", action="write")
   if ( ios /= 0 ) stop "Error opening file data.dat"
 
+  open(unit=2, file="correlation.dat", iostat=ios, status="replace", action="write")
+  if ( ios /= 0 ) stop "Error opening file data.dat"
   print*, "starting generation of random sequance"
   
   !generation of the numbers
 
+  call random_number(rvalue)
+
+  if ( debug )  print*, 'debug1'
+
+  !uniformity test
+
   do i = 1, number, 1
-      do j = 1, i , 1
-        call random_number(rsequance(i,j))
-      end do
-  end do
-
-  print*, 'debug1'
-
-  !Test for b point
-  ! cicle over the k
-  do i = 1, k, 1
-    !cicle over the sequances of N:  1, 2, 3,...., N
-    do j = 1, number, 1
-      !sum the element of the sequance
-      !print*, 'start',j
-      do z = 1, j, 1
-        !print*, test(i,j)
-        test(i,j) = test(i,j) + (rsequance(j,z)**real(i))
-      end do
-      !division over the number of smapes
-      test (i,j) = test (i,j) / real(j) - 1._dp / (i+1)
+    do j = 1, i, 1
+        test(i) = test (i) + rvalue(j)**k 
     end do
+    test(i) = test (i) / real(i) - 1._dp / (k+1)
   end do
-
-  print*, 'debug2'
   
   do i = 1, number, 1
-    write(unit=1, fmt=*, iostat=ios) i, test(7,i)
+    write(unit=1, fmt=*, iostat=ios) i, test(i)
     if ( ios /= 0 ) stop "Write error in file unit 1"
   end do
 
+  if ( debug ) print*, 'debug2'
+
+  !correlation test
+  test = 0
+
+  do i = 1, number - x, 1
+    do j = 1, i, 1
+      test(i) = test(i) + rvalue(i) * rvalue(i + x)
+    end do
+    test(i) = test(i) / real(i) - 1 / 4._dp
+  end do
+
+  do i = 1, number, 1
+    write(unit=2, fmt=*, iostat=ios) i, test(i)
+    if ( ios /= 0 ) stop "Write error in file unit 2"
+  end do
+
   !deallocation stuff
-  
-  if (allocated(rsequance)) deallocate(rsequance, stat=err)
-  if (err /= 0) print *, "rsequance: Deallocation request denied"
+
+  if (allocated(rvalue)) deallocate(rvalue, stat=err)
+  if (err /= 0) print *, "rvalue: Deallocation request denied"
   
   if (allocated(test)) deallocate(test, stat=err)
   if (err /= 0) print *, "test: Deallocation request denied"  
@@ -88,6 +96,9 @@ program random_lcm
   close(unit=1, iostat=ios)
   if ( ios /= 0 ) stop "Error closing file unit 1"
   
+  close(unit=2, iostat=ios)
+  if ( ios /= 0 ) stop "Error closing file unit 2"
+
   print*, "Deallocation complete"
   stop
 end program random_lcm

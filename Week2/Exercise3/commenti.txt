@@ -1,8 +1,12 @@
 Domanda a sta.init - seq.plt
 Si comporta sicuramente molto meglio! anzio possiamo quasi dire che funziona
-Domanda b
 
+Domanda b
+il calcolo con una sequenza sufficientemente lunga (100k) da il risultato desiderato 
+
+Domanda c
+sembra non funzionare.
 
 
 ------
-non tenere in memoria la matrice , usare un unica sequenza, e print real time il valore atteso e poi fare una media sulle sequenze. per ottenere l'andamento.
+Suggerimento extra al punto b mediare su più sequenze generate (idea non implementata.)
