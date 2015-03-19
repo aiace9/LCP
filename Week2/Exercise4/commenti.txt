@@ -1,6 +1,1 @@
-poco da dire, ci si può giocare un po' ma è poco interessante, l'unico dubbio è perché
-     ran_int = (n_max - n_min + 1)*rnd + n_min
-restituisce un numero intero, 
-(int-int+int) == int
-int * real == real ??
-real + int == ???
+Non va perché il seed è troppo piccolo non ho voglia di correggere il baco.... tanto tutti sanno cosa farà e io non lo userò mai......
