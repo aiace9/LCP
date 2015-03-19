@@ -7,6 +7,15 @@ il calcolo con una sequenza sufficientemente lunga (100k) da il risultato deside
 Domanda c
 sembra non funzionare.
 
+Domanda d
+poco da dire, ci si può giocare un po' ma è poco interessante, l'unico dubbio è perché
+     ran_int = (n_max - n_min + 1)*rnd + n_min
+restituisce un numero intero, 
+(int-int+int) == int
+int * real == real ??
+real + int == ???
+
+Domanda e
 
 ------
 Suggerimento extra al punto b mediare su più sequenze generate (idea non implementata.)
