@@ -1,0 +1,8 @@
+Domanda a sta.init - seq.plt
+Si comporta sicuramente molto meglio! anzio possiamo quasi dire che funziona
+Domanda b
+
+
+
+------
+non tenere in memoria la matrice , usare un unica sequenza, e print real time il valore atteso e poi fare una media sulle sequenze. per ottenere l'andamento.
