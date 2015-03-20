@@ -1,0 +1,1 @@
+E' un programma, probabilmente in f77 che simula tante distribuzioni
