@@ -1,50 +1,59 @@
-program test_expdev
+program strange_disy
   implicit none
-  real :: lambda,delta,x
+  real :: delta,x
   integer :: i,n,nbin,ibin, sizer
+  integer :: ios
   integer, dimension(:), allocatable :: histo, seed
-  print*, " Generates random numbers distributed as exp(-x*lambda)"
+  logical :: debug = .false.
+  print*, " Generates random numbers distributed as 1/pi - (1 - x^2)^1/2"
   call random_seed(sizer)
   allocate(seed(sizer))
   print *,'Here the seed has ',sizer,' components; insert them (or print "/") >'  
   read(*,*)seed
   call random_seed(put=seed)
   print *," length of the sequence >"
-  read *, n
-  print *," exponential decay factor (lambda)>"	
-  read *, lambda	
-  print *," Collecting numbers generated up to 2/lambda (disregard the others)"
-  print *," and normalizing the distribution in [0,+infinity[ "
-  print *," Insert number of bins in the histogram>"
+  read *, n	
+  print *," Insert number of bins in the histogram MUST BE EVEN>"
   read *, nbin
   
-  delta = 5./lambda/nbin
+  delta = 2./nbin
   allocate (histo(nbin))
   histo = 0
 
   do i = 1,n
-     call expdev(x)
-     ibin = int (x/lambda/delta) + 1
-     if (ibin <= nbin)histo(ibin) = histo(ibin) + 1
+    call strangeDist(x)
+    ibin = int (x/delta) + 1
+
+    if ( debug ) print*, ibin
+    
+    if (ibin <= nbin/2 .and. ibin >= -nbin/2)then
+      histo( ibin + nbin / 2 ) = histo( ibin + nbin / 2) + 1
+      if ( debug ) print*, histo( ibin + nbin / 2)
+    end if
+
   end do
   
-  open (unit=7,file="expdev.dat",status="replace",action="write")
+  open (unit=7,file="strangedist.dat",status="replace",action="write")
   
   do ibin= 1 ,nbin
-     write(unit=7,fmt=*)(ibin-0.5)*delta,histo(ibin)/float(n)/delta
+     write(unit=7,fmt=*)(ibin-nbin/2-0.5)*delta,histo(ibin)
   end do
 
+  close(unit=7, iostat=ios)
+  if ( ios /= 0 ) stop "Error closing file unit 7"
+  
 contains
 
-  subroutine expdev(x)
+  subroutine strangeDist(x)
+    real , parameter:: pi = 3.14
     REAL, intent (out) :: x
     REAL :: r
-    do
-       call random_number(r)
-       if(r > 0) exit
-    end do
-    x = -log(r)
-  END subroutine expdev
+    
+    call random_number(r)
+
+    x = sin( pi * (2 * r - 1 ) )
+    
+  END subroutine strangeDist
 
 
-end program test_expdev
+end program strange_disy
