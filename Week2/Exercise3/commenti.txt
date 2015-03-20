@@ -16,6 +16,7 @@ int * real == real ??
 real + int == ???
 
 Domanda e
-
+il test b non si può fare perché il seed richiesto dal metodo interno è molto più lungo
+la sequenza non si ripete nel range simulato, o almeno l'algoritmo usato per il primo codice non è più facile come quello usato nel primo caso e non è detto che tornati ad un numero il successivo sia lo stesso visto la vola precedente. Ci vogliono metodi più avanzati
 ------
 Suggerimento extra al punto b mediare su più sequenze generate (idea non implementata.)
