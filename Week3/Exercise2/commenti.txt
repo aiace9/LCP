@@ -1,2 +1,6 @@
 Note:
 abbiamo sostituito int con floor al fine di ottenre la corretta distribuzione.
+
+plot 'strangedist1.dat' u 1: 2 w boxes, 'strangedist2.dat' u 1:2 w boxes
+
+commenti ai risultati.
