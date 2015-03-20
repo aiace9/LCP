@@ -6,4 +6,15 @@ plot 'expdev.dat' u 1:2 w boxes
 Domanda b
 il programma con il file first.init funzona e ralaizza quella che qualitativamente sembra essere una distribuzione esponenziale. Questo è osservabile un po' più in dettaglio con attraverso il plot:
 plot 'expdev.dat' u 1:(-log($2)) w boxes, x
-che mostra -log della distribuzione esponenziale (attenzione che il programma la normalizza) simulata per \lambda = 1 che è circa una retta.
+che mostra -log della distribuzione esponenziale  simulata per \lambda = 1 che è circa una retta.
+quantitativamente il comando
+
+(x)= a*x + b
+fit f(x) 'expdev.dat' u 1 : (log($2)) via a,b
+
+converge ad una retta in un passo e la cosa ci va molto bene.
+
+Domanda c
+vedi domnada b
+
+lambda fittato = -1 perche la funzione è e^-lambda
