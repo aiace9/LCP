@@ -1,0 +1,9 @@
+Domanda a
+il programma testato con first.init funziona.
+il polot ulizzato è banale: 
+plot 'expdev.dat' u 1:2 w boxes
+
+Domanda b
+il programma con il file first.init funzona e ralaizza quella che qualitativamente sembra essere una distribuzione esponenziale. Questo è osservabile un po' più in dettaglio con attraverso il plot:
+plot 'expdev.dat' u 1:(-log($2)) w boxes, x
+che mostra -log della distribuzione esponenziale (attenzione che il programma la normalizza) simulata per \lambda = 1 che è circa una retta.
