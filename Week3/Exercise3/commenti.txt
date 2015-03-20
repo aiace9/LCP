@@ -1,0 +1,1 @@
+funziona, la media e la varianza sono in accordo con quanto atteso
