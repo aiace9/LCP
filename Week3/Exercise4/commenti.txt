@@ -1,0 +1,1 @@
+Va tutto bene, attenzione al fit nel plot, prima bisogna plottare, poi vedere qual'e il miglior xmax e dunque andare a modificare i parametri del fit
