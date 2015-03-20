@@ -22,7 +22,7 @@ program strange_disy
 
   do i = 1,n
     call strangeDist(x)
-    ibin = int (x/delta) + 1
+    ibin = floor ( x / delta) + 1
 
     if ( debug ) print*, ibin
     

@@ -1,0 +1,2 @@
+Note:
+abbiamo sostituito int con floor al fine di ottenre la corretta distribuzione.
