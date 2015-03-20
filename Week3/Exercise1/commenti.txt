@@ -8,6 +8,7 @@ il programma con il file first.init funzona e ralaizza quella che qualitativamen
 plot 'expdev.dat' u 1:(-log($2)) w boxes, x
 che mostra -log della distribuzione esponenziale  simulata per \lambda = 1 che è circa una retta.
 quantitativamente il comando
+Nel grafico si vedono verso la fine dei picchi, questi sono dovuti ad una bassa statistica e non sono proprio attendibili, per migliorarli è necessario incrementare la distribuzione
 
 (x)= a*x + b
 fit f(x) 'expdev.dat' u 1 : (log($2)) via a,b
