@@ -17,15 +17,19 @@ program test_expdev
   print *," and normalizing the distribution in [0,+infinity[ "
   print *," Insert number of bins in the histogram>"
   read *, nbin
-  delta = 2./lambda/nbin
+  
+  delta = 5./lambda/nbin
   allocate (histo(nbin))
   histo = 0
+
   do i = 1,n
      call expdev(x)
      ibin = int (x/lambda/delta) + 1
      if (ibin <= nbin)histo(ibin) = histo(ibin) + 1
   end do
+  
   open (unit=7,file="expdev.dat",status="replace",action="write")
+  
   do ibin= 1 ,nbin
      write(unit=7,fmt=*)(ibin-0.5)*delta,histo(ibin)/float(n)/delta
   end do
