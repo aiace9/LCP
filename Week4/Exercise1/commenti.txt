@@ -1,0 +1,14 @@
+Punto1
+	Ovviamente i singoli risultati cambiano ma non le medie rispettano comunque il valore atteso per quanto possibile (1 walker è un numero piccolo su cui mediare)
+Punto2
+	asintoticametne funziona tutto all' aumentare del numero di walker soprattutto: più walker => più statistica per la media. Ma se il cammino è troppo lungo il problema si ripesenta, al solito è importante il rapporto lunghezza cammino, n° di walker
+	dannazoione a quanto mi sono disperato per capire cosa contenteva X_n, ho bisogno di caffe.....
+	attenzione il file. plt è hardcoded con pleft = pright = 0.5
+Punto3
+	plot [][0:0.1] 'delta-deltath.dat' u 1:2 w p
+	mostra il risultato desiderato e si possono facilmente trarre le conclusioni.
+	Unica cosa... io mi aspettavo una parabola che non c'è: questo è dovuto al teorema del limite centrale mandando a quel paese (in questo caso) il raginamento sopra: ovvero più passi faccio più è elevata la probabilità di trovarmi nei pressi dell'orignine e quindi meno è importante la media sui walker.
+Punto5
+	per il caso tipico simulato ci si aspetta 4 * pleft * pright + 2 log (l) = 1 che è quanto effettivamente si trova. (sarebbe da compuare l'errore ma magari un altra volta)
+	chiaramente avendo fatto un logaritmo log-log la pendenza della retta è = 1 (altrimenti saremmo in presenza di comportamenti diffusivi.... che vorra mai dire? mah...)
+	ovviamente con un grafico log solo in y ci saremmo aspettati una pendenza pari al log(N) numero di steps.
