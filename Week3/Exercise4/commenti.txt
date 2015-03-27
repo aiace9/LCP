@@ -1,1 +1,4 @@
 Va tutto bene, attenzione al fit nel plot, prima bisogna plottare, poi vedere qual'e il miglior xmax e dunque andare a modificare i parametri del fit
+
+per n troppo grandi il passo t è troppo grande, mi spiego meglio:
+alla fine, anche se con un metodo ingegnoso, il nostro algoritmo ad ogni ciclo calcola dN/dt ma per N grandi con il passo temporale che usiamo N_left varia troppo per essere considerato costante.
