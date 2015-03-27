@@ -12,8 +12,10 @@ program rw1d
   integer, dimension(:), allocatable :: x_N, x2_N ! sum of deviations and 
                                                   ! squares over the runs
   integer, dimension(:), allocatable :: P_N     ! final positions, sum over runs
+  real, dimension(:), allocatable :: P_N_anal, P_N_anal_sto     ! final positions, sum over runs
 
   integer :: ios
+  integer :: i,j
 
   print *, "Enter number of steps >"
   read *, N
@@ -32,10 +34,14 @@ program rw1d
   allocate(x_N(N))
   allocate(x2_N(N))
   allocate(P_N(-N:N))
+  allocate(P_N_anal(-N:N))
+  allocate(P_N_anal_sto(-N-1:N+1))
   x_N  = 0
   x2_N = 0
   P_N  = 0
+  
   jump = 1
+
 
   !open files
   open(unit=2, file='walk.dat', iostat=ios, status="replace", action="write")
@@ -46,6 +52,23 @@ program rw1d
 
   open(unit=4, file='delta.dat', iostat=ios, status="replace", action="write")
   if ( ios /= 0 ) stop "Error opening file name"
+
+  !create the anal(cit.)itical distributions P_N
+  !initialization:
+  P_N_anal = 0.0
+  P_N_anal(0) = 1.0
+  P_N_anal_sto = 0.0
+
+  do i = 1, N, 1
+    !create the storical arry
+    do j = -N, N, 1
+      P_N_anal_sto(j) = P_N_anal(j)
+    end do
+    !update the new line
+    do j = -N, N, 1
+      P_N_anal(j) = (1 / 2.0) * P_N_anal_sto(j-1) +(1 / 2.0) * P_N_anal_sto(j+1)
+    end do
+  end do
 
 
   do irun = 1, nruns
@@ -104,7 +127,7 @@ program rw1d
 
   write(1,*)"# N, mean deviations, mean squared deviations, sigma^2"
   do ix = - N, N
-  write(1,*)ix,real(P_N(ix))/nruns
+  write(1,*)ix,real(P_N(ix))/nruns, P_N_anal(ix)
   end do
 
   !closing file
