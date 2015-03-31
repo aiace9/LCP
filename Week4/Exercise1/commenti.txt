@@ -12,3 +12,10 @@ Punto5
 	per il caso tipico simulato ci si aspetta 4 * pleft * pright + 2 log (l) = 1 che è quanto effettivamente si trova. (sarebbe da compuare l'errore ma magari un altra volta)
 	chiaramente avendo fatto un logaritmo log-log la pendenza della retta è = 1 (altrimenti saremmo in presenza di comportamenti diffusivi.... che vorra mai dire? mah...)
 	ovviamente con un grafico log solo in y ci saremmo aspettati una pendenza pari al log(N) numero di steps.
+	usare plot.plt
+Punto7
+	usare plot2.plt
+	dopo aver eseguito la simulazione salvarsi il valore di sigma che è stato restituito <\delta x^2 > (non ricordo il perché di questo risultato!!!)
+	assegnare questo valore ad "a" nel plot2.plt e sostituire x_min e x_max con N
+	lanciare
+	il fit risulta fallire miseramente, il valore di a che parte da sigma stimato (circa) divneta molto più piccolo. Questo è dovuto alla presenza dei vuoti dove non è stato ottenuto attraverso l'algoritmo discreto P_N(x)

@@ -18,4 +18,4 @@ plot [][] 'delta.dat' u (log($1)):(log($2)) w p t "delta", f(x) t "fit"
 print '-----------------------'
 print 'risultati del fit'
 print '4 * pleft * pright + 2 log (l) = ', exp(b)
-print 'pendenza = ' a
+print 'pendenza = ', a
