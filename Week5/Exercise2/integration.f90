@@ -40,12 +40,13 @@ module integration
 
 	end function MC
 
-	function MC_imp (f, a, b, n,sigma)
+	function MC_imp (f, a, b, n,sigma,debug)
 		!important sample with an exponential
 
 		real(kind = dp) :: MC_imp
 		real(kind = dp), external :: f
 		real(kind = dp), intent(in) :: a,b
+		logical, intent(in) :: debug
 		real(kind = dp), intent(out) ::sigma
 		integer, intent(in) :: n
 		
@@ -60,26 +61,29 @@ module integration
 		int_value = 0.0
 		med = 0
 		med2= 0
-		c = 0.1
+		c = 1.0
 
-		open(unit=1, file='name.dat')
+		if ( debug )  open(unit=1, file='name.dat')
 
 		!$omp parallel do privete(rnd reduction ( + : int_value)
 		do i = 1, n, 1
 			do
 				call random_number(rnd)
 				!distribution convertion
-				rnd = -(1/c) * log(rnd)
-				if ( rnd >= a .and. rnd <= b ) exit
+				if ( rnd > 0 ) then
+					rnd = -(1.0/c) * log(rnd)
+					if ( rnd >= a .and. rnd <= b ) exit					
+				end if
 			end do
 			!summ					
 			int_value = int_value +f(rnd)/ (c * exp(-rnd))
 			med =  med + rnd
 			med2 = med2 + rnd**2
-			write(unit=1, fmt=*) i, int_value / real(i) * (c*(exp(-a) - exp(-b))) - sqrt(acos(-1.0))/2.0 * erf(1.0)
+			if ( debug )write(unit=1, fmt=*) i, (int_value / real(i)) * (c*(exp(-a) - exp(-b))) - sqrt(acos(-1.0))/2.0 * erf(1.0) ,&
+			 med/real(i), int_value/real(i)
 		end do
 
-		close(unit=1)
+		if ( debug ) close(unit=1)
 
 		sigma = sqrt(med2/ real(n) + (med / real(n))**2)
 

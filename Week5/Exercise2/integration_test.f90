@@ -9,8 +9,8 @@ program integration_test
 
     a = 0.d0
     b = 1.d0
-    int_true = 0.746824
-    n = 100000
+    int_true =  sqrt(acos(-1.0))/2.0 * erf(1.0)
+    n = 20000
     !$ print*, ('compiledi with openmp')
     print 10, int_true
  10 format("TI", es22.14)
@@ -19,8 +19,8 @@ program integration_test
 
     print 11, int_stimated, sigma1
  11 format("MC", es22.14, " sigma", es22.14)
-
-    int_stimated2 = MC_imp(f, a, b, n, sigma2)
+    n=1000
+    int_stimated2 = MC_imp(f, a, b, n, sigma2,.false.)
 
     print 12, int_stimated2, sigma2
  12 format("IS", es22.14, " sigma", es22.14)
@@ -33,7 +33,7 @@ contains
         implicit none
         real(kind=dp), intent(in) :: x 
         
-        f = exp(- x**2)
+        f = exp(-x**2)
     end function f
 
 end program integration_test
