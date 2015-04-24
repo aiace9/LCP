@@ -25,7 +25,7 @@ module integration
 		integer :: i
 		
 		!$ call omp_set_num_threads(4)
-		debug = .true.
+		debug = .false.
 
 		int_value = 0
 		med = 0
@@ -46,7 +46,7 @@ module integration
 				med =  med + rnd(1)
 				med2 = med2 + rnd(1)**2
 			end if
-			if ( debug )write(unit=1, fmt=*) i, (int_value / real(i)) - acos(-1.0_dp)!subtract the real value here 
+			if ( debug )write(unit=1, fmt=*) i, (int_value / real(i)) *(b-a)*(d-c) - acos(-1.0_dp)!subtract the real value here 
 
 		end do
 

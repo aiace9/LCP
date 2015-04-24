@@ -10,8 +10,8 @@ program integration_test
     a = 0.d0
     b = 1.0d0
     c = 0.d0
-    d = 4.5d0
-    int_true = acos(-1.d0)
+    d = 4.d0
+    int_true = acos(-1.0_dp)
     n = 1d6
     !$ print*, ('compiled with openmp')
     print 10, int_true
