@@ -2,3 +2,10 @@ Punto1
 	Gia con il penultimo abbiamo risultati più che soddisfacienti, ma il fit è in accordo quantitativamente solo per l'ultimo plot.
 	(i file utilizzati sono stati 1-4 init, la funzione di fit è stata f(x)= a exp(-x**2/b) e per il nostro caso cercavamo un b = 2)
 Punto2
+	sembra un esponenziale decrescente, c'è un picco, forse dovuto ad errore mio o forse dovuto al fatto che il codice comunque non genera numeri random ma stocastici, non ho voglia di controllare, il file:variance.dat è stato generato a mano.
+Punto3
+	6-11 da grafico precedente
+Punto4
+	fatto, con il codice opportunametne modificato della cartella Punto4, mi dice poco, si vede che convege a 0 oscillando molto.
+Punto5
+	lancia il codice e bon

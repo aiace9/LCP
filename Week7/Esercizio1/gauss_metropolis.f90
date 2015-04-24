@@ -14,8 +14,18 @@ program gauss_metropolis
   real, dimension(:), allocatable :: istog
   character(len=13), save :: format1 = "(a7,2x,2f9.5)"
 
+  integer ::ios
+
+
+
   print*,' insert n, sigma, x0, delta, max number of bin in the histogram  >'
   read*, n, sigma,x0,delta,maxbin
+  !Point 2 
+  !n=10000
+  !sigma=1
+  !x0=0
+  !maxbin=500
+  !read*,delta
   allocate(istog(-maxbin/2:maxbin/2))
   istog = 0.
   deltaisto = 10.*sigma/maxbin  ! histogram over a range of 10*sigma
@@ -57,12 +67,20 @@ program gauss_metropolis
   write(unit=*,fmt=format1)"# <x^4>= ",x4/n,3.0_dp*sigma**4
 
   open(1,file='gauss_metropolis.dat',status='replace')
-  write(unit=1,fmt=*)"# n, x0, delta = ",n,x0,delta
+  !write(unit=1,fmt=*)"# n, x0, delta = ",n,x0,delta
   do ibin = -maxbin/2 , maxbin/2
      write(1,*)ibin*deltaisto, istog(ibin)/real(n)/deltaisto
   end do
-
   close(1)
+
+  open(unit=1, file='acceptance.dat', iostat=ios, action="write", position ="append")
+  if ( ios /= 0 ) stop "Error opening file acceptance"
+  write(unit=1, fmt=*, iostat=ios) n, acc/n
+  if ( ios /= 0 ) stop "Write error in file unit 1"
+  close(unit=1, iostat=ios)
+  if ( ios /= 0 ) stop "Error closing file unit 1"
+  
+  
   deallocate(istog)
 
 end program gauss_metropolis
