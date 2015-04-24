@@ -17,6 +17,8 @@ program metropolis_sampling
   real(kind=dp):: x,x1,x2,x3,x4,xp,delta,expx,expxp,w,acc
   character(len=13), save :: format1 = "(a7,2x,2f9.5)"
 
+  integer :: ios
+
   acc = 0.0_dp
   x1 = 0.0_dp
   x2 = 0.0_dp
@@ -25,7 +27,10 @@ program metropolis_sampling
   ekin = 0.0_dp
   epot = 0.0_dp
   print*, "n, sigma, x0, delta"
-  read*,   n,sigma,x,delta
+  read*,   n, sigma,x,delta
+
+  open(unit=1, file='plot.dat', iostat=ios, status="unknown", action="write")
+  if ( ios /= 0 ) stop "Error opening file plot.dat"
 
   do i=1,n
      ekin = ekin - 0.5_dp * ((x/(2*sigma**2))**2 - 1/(2*sigma**2))
@@ -47,7 +52,13 @@ program metropolis_sampling
      !ccccccccccccccccccccccccccccccc
         acc=acc+1.0_dp                
      endif
+      write(unit=1, fmt=*, iostat=ios) i, epot/real(i) - 5.d-1 * sigma**2,&
+         ekin/real(i) - 1 / (8.d0 * sigma**2), x2/real(i) - sigma ** 2
+     if ( ios /= 0 ) stop "Write error in file unit 1"
   enddo
+
+  close(unit=1, iostat=ios)
+  if ( ios /= 0 ) stop "Error closing file unit 1"
 
   write(unit=*,fmt=*)"acceptance ratio = ",acc/n
   write(unit=*,fmt=*)"# Results (simulation vs. exact results):"
