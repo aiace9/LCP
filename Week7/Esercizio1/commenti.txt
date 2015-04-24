@@ -1,0 +1,4 @@
+Punto1 
+	Gia con il penultimo abbiamo risultati più che soddisfacienti, ma il fit è in accordo quantitativamente solo per l'ultimo plot.
+	(i file utilizzati sono stati 1-4 init, la funzione di fit è stata f(x)= a exp(-x**2/b) e per il nostro caso cercavamo un b = 2)
+Punto2
