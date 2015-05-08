@@ -1,0 +1,9 @@
+1) nella subr. periodic, avevo scritto "idowm" anziche' "idown"
+   e quindi sistematicamente uno tra gli spin NN veniva preso nullo
+   anziche' +1 o -1. Ovvia sorgente di errore (umano)...
+   Che cosa si impara? che e' meglio dichiarare esplicitamente tutte 
+   le variabili usate (e NON fidarsi di dich. implicite)
+2) ho sostituito la ran2 con la ran3 e le cose vanno MOLTO meglio...
+   Che cosa si impara? che e' bene controllare la bonta' del generatore
+   di numeri casuali che si usa... Ce ne saremmo anche accorti facendo 
+   lo studio delle correlazioni.

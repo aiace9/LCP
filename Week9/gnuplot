@@ -1,0 +1,5 @@
+gnuplot> set view 0,0
+gnuplot> set nosurface
+gnuplot> set contour
+gnuplot> set cntrparam levels discrete -1,1
+gnuplot> splot "ising2.dat"
