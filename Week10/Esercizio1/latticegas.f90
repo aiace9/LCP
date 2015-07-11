@@ -28,8 +28,10 @@ program latticegas
 
   ! Set average time  between jumps and jump length Units is  s and cm 
   ! although actually this is not needed for the simulation 
-  deltat=1d-9; ! 1 ns 
-  a=2e-8; ! 2  A
+  !deltat=1d-9; ! 1 ns 
+  !a=2e-8; ! 2  A
+  deltat=1.0; ! 1 ns 
+  a=1.0; ! 2  A
 
   print*," # of steps>"
   read*, Nsteps  

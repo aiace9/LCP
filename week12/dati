@@ -1,0 +1,126 @@
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ a, n, x0, delta
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.29999999999999999     
+ # Results (simulation vs. exact results):
+etot =     0.70664  0.62500
+ekin =     0.60885  0.50000
+epot =     0.09779  0.12500
+evar =     0.23602  0.28125
+<x>  =     0.02765  0.00000
+<x^2>=     0.19558  0.25000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.35099999999999998     
+ # Results (simulation vs. exact results):
+etot =     0.55102  0.52722
+ekin =     0.39663  0.34722
+epot =     0.15439  0.18000
+evar =     0.03873  0.05593
+<x>  =     0.01890  0.00000
+<x^2>=     0.30877  0.36000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.39200000000000002     
+ # Results (simulation vs. exact results):
+etot =     0.50000  0.50000
+ekin =     0.29779  0.25000
+epot =     0.20221  0.25000
+evar =    -0.00000  0.00000
+<x>  =     0.04636  0.00000
+<x^2>=     0.40442  0.50000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.45500000000000002     
+ # Results (simulation vs. exact results):
+etot =     0.48845  0.51531
+ekin =     0.23739  0.19531
+epot =     0.25106  0.32000
+evar =     0.01954  0.03109
+<x>  =     0.00787  0.00000
+<x^2>=     0.50213  0.64000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.48999999999999999     
+ # Results (simulation vs. exact results):
+etot =     0.51635  0.55932
+ekin =     0.18077  0.15432
+epot =     0.33558  0.40500
+evar =     0.09236  0.12568
+<x>  =    -0.00910  0.00000
+<x^2>=     0.67115  0.81000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.53800000000000003     
+ # Results (simulation vs. exact results):
+etot =     0.55519  0.62500
+ekin =     0.14827  0.12500
+epot =     0.40692  0.50000
+evar =     0.19351  0.28125
+<x>  =    -0.00601  0.00000
+<x^2>=     0.81383  1.00000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.29999999999999999     
+ # Results (simulation vs. exact results):
+etot =     0.70664  0.62500
+ekin =     0.60885  0.50000
+epot =     0.09779  0.12500
+evar =     0.23602  0.28125
+<x>  =     0.02765  0.00000
+<x^2>=     0.19558  0.25000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.35099999999999998     
+ # Results (simulation vs. exact results):
+etot =     0.55102  0.52722
+ekin =     0.39663  0.34722
+epot =     0.15439  0.18000
+evar =     0.03873  0.05593
+<x>  =     0.01890  0.00000
+<x^2>=     0.30877  0.36000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.39200000000000002     
+ # Results (simulation vs. exact results):
+etot =     0.50000  0.50000
+ekin =     0.29779  0.25000
+epot =     0.20221  0.25000
+evar =    -0.00000  0.00000
+<x>  =     0.04636  0.00000
+<x^2>=     0.40442  0.50000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.45500000000000002     
+ # Results (simulation vs. exact results):
+etot =     0.48845  0.51531
+ekin =     0.23739  0.19531
+epot =     0.25106  0.32000
+evar =     0.01954  0.03109
+<x>  =     0.00787  0.00000
+<x^2>=     0.50213  0.64000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.48999999999999999     
+ # Results (simulation vs. exact results):
+etot =     0.51635  0.55932
+ekin =     0.18077  0.15432
+epot =     0.33558  0.40500
+evar =     0.09236  0.12568
+<x>  =    -0.00910  0.00000
+<x^2>=     0.67115  0.81000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.53800000000000003     
+ # Results (simulation vs. exact results):
+etot =     0.55519  0.62500
+ekin =     0.14827  0.12500
+epot =     0.40692  0.50000
+evar =     0.19351  0.28125
+<x>  =    -0.00601  0.00000
+<x^2>=     0.81383  1.00000

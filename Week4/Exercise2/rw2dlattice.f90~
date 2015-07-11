@@ -87,8 +87,8 @@ program drunk
 
   end do
 
-  dr2 = xn2/drunks + yn2/drunks - (xn/drunks) ** 2 - (yn/drunks) ** 2
-  !dr2 = xn2/drunks + yn2/drunks
+  !dr2 = xn2/drunks + yn2/drunks - (xn/drunks) ** 2 - (yn/drunks) ** 2
+   dr2 = xn2/drunks + yn2/drunks
   
   print*, " <dr^2> value ", dr2
   print*, "the first motion sequence result in"

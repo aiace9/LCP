@@ -15,11 +15,11 @@ program istogram_module_test
 	integer :: err
 
 	!histogram
-	call init_ist(0d0,5d2,1d0)
+	call init_ist(0d0,5d2,1d-4)
 	
 	!input
 	N=500
-	points =1000
+	points =100000
 
 	!internal initialization
 	med = 0

@@ -1,0 +1,288 @@
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.31900000000000001     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.67051  0.64844
+ekin =     0.52943  0.50000
+epot =     0.14108  0.14844
+evar =     0.22004  0.28125
+<x>  =     0.00790  0.00000
+<x^2>=     0.23529  0.25000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.32479999999999998     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.64031  0.63600
+ekin =     0.48587  0.48058
+epot =     0.15444  0.15542
+evar =     0.18525  0.24575
+<x>  =     0.00447  0.00000
+<x^2>=     0.25724  0.26010
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.32640000000000002     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.62982  0.62490
+ekin =     0.46969  0.46228
+epot =     0.16012  0.16262
+evar =     0.15158  0.21396
+<x>  =     0.00765  0.00000
+<x^2>=     0.26606  0.27040
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.33479999999999999     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.61585  0.61504
+ekin =     0.44383  0.44500
+epot =     0.17202  0.17004
+evar =     0.12784  0.18550
+<x>  =     0.00698  0.00000
+<x^2>=     0.28164  0.28090
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.34610000000000002     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.60083  0.60636
+ekin =     0.41363  0.42867
+epot =     0.18720  0.17769
+evar =     0.10424  0.16003
+<x>  =     0.01699  0.00000
+<x^2>=     0.30183  0.29160
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.34389999999999998     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.60782  0.59879
+ekin =     0.42467  0.41322
+epot =     0.18315  0.18556
+evar =     0.07594  0.13726
+<x>  =     0.01098  0.00000
+<x^2>=     0.29412  0.30250
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.34989999999999999     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.60359  0.59228
+ekin =     0.42094  0.39860
+epot =     0.18265  0.19368
+evar =     0.05597  0.11693
+<x>  =     0.01296  0.00000
+<x^2>=     0.29602  0.31360
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.36020000000000002     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.59479  0.58677
+ekin =     0.39483  0.38473
+epot =     0.19996  0.20204
+evar =     0.04506  0.09882
+<x>  =     0.01412  0.00000
+<x^2>=     0.31637  0.32490
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.36249999999999999     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.58758  0.58222
+ekin =     0.38204  0.37158
+epot =     0.20554  0.21064
+evar =     0.03257  0.08273
+<x>  =     0.00345  0.00000
+<x^2>=     0.32693  0.33640
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.36770000000000003     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.58485  0.57858
+ekin =     0.36659  0.35909
+epot =     0.21826  0.21949
+evar =     0.02457  0.06848
+<x>  =     0.00478  0.00000
+<x^2>=     0.34083  0.34810
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.37490000000000001     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57987  0.57582
+ekin =     0.36071  0.34722
+epot =     0.21916  0.22860
+evar =     0.01612  0.05593
+<x>  =     0.00273  0.00000
+<x^2>=     0.34602  0.36000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.38360000000000000     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57743  0.57390
+ekin =     0.34473  0.33593
+epot =     0.23270  0.23797
+evar =     0.01653  0.04493
+<x>  =     0.01145  0.00000
+<x^2>=     0.36235  0.37210
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.38550000000000001     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57605  0.57279
+ekin =     0.33893  0.32518
+epot =     0.23711  0.24761
+evar =     0.01686  0.03537
+<x>  =     0.00307  0.00000
+<x^2>=     0.36815  0.38440
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.39210000000000000     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57549  0.57246
+ekin =     0.32376  0.31494
+epot =     0.25173  0.25752
+evar =     0.02000  0.02714
+<x>  =    -0.00132  0.00000
+<x^2>=     0.38578  0.39690
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.39629999999999999     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57433  0.57289
+ekin =     0.32093  0.30518
+epot =     0.25339  0.26771
+evar =     0.01800  0.02015
+<x>  =     0.00917  0.00000
+<x^2>=     0.38845  0.40960
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.40029999999999999     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57658  0.57405
+ekin =     0.31180  0.29586
+epot =     0.26478  0.27819
+evar =     0.02819  0.01432
+<x>  =     0.02244  0.00000
+<x^2>=     0.39973  0.42250
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.40660000000000002     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57469  0.57592
+ekin =     0.30241  0.28696
+epot =     0.27229  0.28896
+evar =     0.02892  0.00957
+<x>  =     0.00338  0.00000
+<x^2>=     0.41215  0.43560
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.41830000000000001     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57875  0.57848
+ekin =     0.28909  0.27846
+epot =     0.28966  0.30002
+evar =     0.04412  0.00583
+<x>  =     0.01554  0.00000
+<x^2>=     0.43177  0.44890
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.41839999999999999     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.58132  0.58171
+ekin =     0.28227  0.27033
+epot =     0.29905  0.31138
+evar =     0.05622  0.00306
+<x>  =     0.01266  0.00000
+<x^2>=     0.44197  0.46240
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.42259999999999998     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57921  0.58560
+ekin =     0.28461  0.26255
+epot =     0.29459  0.32305
+evar =     0.05969  0.00120
+<x>  =     0.01545  0.00000
+<x^2>=     0.43609  0.47610
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.42299999999999999     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.57998  0.59014
+ekin =     0.27190  0.25510
+epot =     0.30808  0.33504
+evar =     0.05506  0.00020
+<x>  =     0.01724  0.00000
+<x^2>=     0.45774  0.49000
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.43290000000000001     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.59152  0.59531
+ekin =     0.25978  0.24797
+epot =     0.33173  0.34734
+evar =     0.13300  0.00003
+<x>  =     0.01588  0.00000
+<x^2>=     0.48008  0.50410
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.43690000000000001     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.59813  0.60110
+ekin =     0.24865  0.24113
+epot =     0.34948  0.35998
+evar =     0.15779  0.00065
+<x>  =     0.01151  0.00000
+<x^2>=     0.50223  0.51840
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.43690000000000001     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.59813  0.60110
+ekin =     0.24865  0.24113
+epot =     0.34948  0.35998
+evar =     0.15779  0.00065
+<x>  =     0.01151  0.00000
+<x^2>=     0.50223  0.51840
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.44290000000000002     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.59825  0.60751
+ekin =     0.24436  0.23457
+epot =     0.35388  0.37294
+evar =     0.15389  0.00203
+<x>  =     0.01083  0.00000
+<x^2>=     0.51064  0.53290
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.44890000000000002     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.61295  0.61452
+ekin =     0.23092  0.22827
+epot =     0.38203  0.38625
+evar =     0.19466  0.00415
+<x>  =     0.01850  0.00000
+<x^2>=     0.54124  0.54760
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.45319999999999999     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.61696  0.62212
+ekin =     0.22682  0.22222
+epot =     0.39014  0.39990
+evar =     0.21872  0.00697
+<x>  =     0.02703  0.00000
+<x^2>=     0.55086  0.56250
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.45789999999999997     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.62023  0.63032
+ekin =     0.22606  0.21641
+epot =     0.39417  0.41391
+evar =     0.25639  0.01048
+<x>  =     0.01845  0.00000
+<x^2>=     0.55185  0.57760
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.46289999999999998     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.62971  0.63910
+ekin =     0.21828  0.21083
+epot =     0.41143  0.42827
+evar =     0.31210  0.01466
+<x>  =     0.01155  0.00000
+<x^2>=     0.57195  0.59290
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.46660000000000001     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.63949  0.64846
+ekin =     0.21198  0.20546
+epot =     0.42750  0.44301
+evar =     0.34338  0.01950
+<x>  =     0.00484  0.00000
+<x^2>=     0.58907  0.60840
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.47149999999999997     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.65832  0.65840
+ekin =     0.20407  0.20029
+epot =     0.45426  0.45811
+evar =     0.44261  0.02498
+<x>  =     0.00523  0.00000
+<x^2>=     0.61233  0.62410
+ n, sigma  (remember: beta = 1 / (4*sigma**2)), x0, delta
+ acceptance ratio =   0.47739999999999999     
+ # Results (simulation vs. exact results - not valid, check notes.):
+etot =     0.66309  0.66891
+ekin =     0.20363  0.19531
+epot =     0.45946  0.47360
+evar =     0.50046  0.03109
+<x>  =     0.01126  0.00000
+<x^2>=     0.61274  0.64000
